@@ -24,6 +24,9 @@ module.exports = {
       fontFamily: {
         rubik: ['var(--font-rubik)'],
       },
+      backgroundImage: {
+        icon: "url('/icon.png')",
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

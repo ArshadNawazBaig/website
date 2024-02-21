@@ -42,13 +42,13 @@ export const partners = [
 ];
 
 export const pricing = [
-  {
-    title: 'Starter',
-    subtitle: 'Free',
-    price: 'Free',
-    packages: ['1 Games/mo.', 'Limited Distribution', '0 - 199,000 Visitors'],
-    type: 'starter',
-  },
+  // {
+  //   title: 'Starter',
+  //   subtitle: 'Free',
+  //   price: 'Free',
+  //   packages: ['1 Games/mo.', 'Limited Distribution', '0 - 199,000 Visitors'],
+  //   type: 'starter',
+  // },
   {
     title: 'Business',
     subtitle: 'Most Popular',
