@@ -20,16 +20,16 @@ const PricingSection = ({ id }) => {
         </div>
 
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12 xl:col-span-2"></div>
+          <div className="col-span-12 xl:col-span-1"></div>
           {pricing?.map((price) => (
             <div
-              className="col-span-12 sm:col-span-6 xl:col-span-4"
+              className="col-span-12 sm:col-span-6 xl:col-span-5"
               key={price.title}
             >
               <PricingCard type={price.type} details={price} />
             </div>
           ))}
-          <div className="col-span-12 xl:col-span-2"></div>
+          <div className="col-span-12 xl:col-span-1"></div>
         </div>
       </ContainerWrapper>
     </section>

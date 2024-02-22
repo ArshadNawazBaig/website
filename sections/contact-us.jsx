@@ -138,7 +138,7 @@ const ContactSection = ({ id }) => {
                           <FormControl>
                             <Input
                               className="h-[54px]"
-                              placeholder="Your Phone Number"
+                              placeholder="Your Mobile Number"
                               {...field}
                             />
                           </FormControl>

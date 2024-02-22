@@ -3,7 +3,8 @@ import React from 'react';
 import { Button } from './ui/button';
 
 const PricingCard = ({ className, details }) => {
-  const { title, subtitle, price, packages, type } = details;
+  const { title, subtitle, price, packages, type, extras, anualPrice } =
+    details;
   const types =
     type === 'starter'
       ? 'bg-[#18bc9d]'
@@ -20,7 +21,11 @@ const PricingCard = ({ className, details }) => {
       <h2 className="font-semibold text-2xl mb-0">{subtitle}</h2>
       <div className="w-10 border-b h-1 mx-auto border-gray-500 mt-4 mb-6"></div>
       <h1 className="text-5xl mb-2">${price}</h1>
-      <p className="text-md text-gray-200">Monthly</p>
+      <p className="text-md text-gray-200">
+        {type === 'business' ? '2 Months' : 'Month'}
+      </p>
+      <h1 className="text-5xl mb-2 mt-3">${anualPrice}</h1>
+      <p className="text-md text-gray-200">Annual</p>
       <ul className="p-0 list-none mt-8">
         {packages?.map((pac) => (
           <li
@@ -28,6 +33,18 @@ const PricingCard = ({ className, details }) => {
             key={pac}
           >
             {pac}
+          </li>
+        ))}
+      </ul>
+      <p className="text-lg font-semibold my-8 text-gray-200">Extras</p>
+      <ul className="p-0 list-none text-start">
+        {extras?.map((pac) => (
+          <li
+            className="text-md border-b border-gray-400 border-dashed py-2 flex gap-2 w-full justify-between"
+            key={pac.name}
+          >
+            <span>{pac.name}</span>
+            <span>{pac.value}</span>
           </li>
         ))}
       </ul>
