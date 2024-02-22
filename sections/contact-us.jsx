@@ -10,7 +10,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -27,6 +27,9 @@ const formSchema = z.object({
 });
 
 const ContactSection = ({ id }) => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,7 +42,25 @@ const ContactSection = ({ id }) => {
   });
 
   const onSubmit = async (data) => {
-    console.log(data);
+    setLoading(true);
+    setError(false);
+    setSuccess(false);
+    fetch('/api/mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        setLoading(false);
+        setSuccess(true);
+        form.reset();
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(true);
+      });
   };
   return (
     <section id={id}>
@@ -166,9 +187,27 @@ const ContactSection = ({ id }) => {
                     />
                   </div>
                 </div>
+                {success && (
+                  <div>
+                    <p className="text-sm text-green-500">
+                      Your message has been sent.
+                    </p>
+                  </div>
+                )}
+                {error && (
+                  <div>
+                    <p className="text-sm text-red-500">
+                      Something went wrong. Please try again.
+                    </p>
+                  </div>
+                )}
                 <div className="pt-4 gap-3">
-                  <Button className="h-[54px] px-12" type="submit">
-                    Submit
+                  <Button
+                    className="h-[54px] px-12"
+                    disabled={loading}
+                    type="submit"
+                  >
+                    {loading ? 'Loading...' : 'Submit'}
                   </Button>
                 </div>
               </form>
