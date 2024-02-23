@@ -9,7 +9,10 @@ const GamesSection = ({ id }) => {
       <ContainerWrapper className="pt-16">
         <div className="grid grid-cols-12 gap-4">
           {games.map((game) => (
-            <div className="col-span-3" key={game.url}>
+            <div
+              className="col-span-6 md:col-span-4 lg:col-span-3"
+              key={game.url}
+            >
               <GameCard title={game.title} url={game.url} image={game.image} />
             </div>
           ))}

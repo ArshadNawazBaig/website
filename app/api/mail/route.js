@@ -1,16 +1,14 @@
 import { NextResponse } from 'next/server';
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey(
-  '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'
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export const POST = async (req, res) => {
   const body = await req.json();
   try {
     const msg = {
-      to: 'support@iveew.co',
-      from: body.email,
+      to: body.email,
+      from: 'support@iveew.co',
       subject: 'match3win',
       text: 'test',
       html: `

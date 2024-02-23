@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-5 lg:gap-16">
               <div className="text-white">
-                <Link href="#hero">
+                <Link href="/">
                   <Image src="/logo.png" alt="logo" height={50} width={135} />
                 </Link>
               </div>
