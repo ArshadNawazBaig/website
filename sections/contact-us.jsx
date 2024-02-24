@@ -21,7 +21,7 @@ import Image from 'next/image';
 const formSchema = z.object({
   name: z.string().min(1, { message: 'Required' }),
   business: z.string().min(1, { message: 'Required' }),
-  email: z.string().min(1, { message: 'Required' }),
+  email: z.string().email(z.string().min(1, { message: 'Required' })),
   phone: z.string().min(1, { message: 'Required' }),
   message: z.string().min(1, { message: 'Required' }),
 });
@@ -53,8 +53,14 @@ const ContactSection = ({ id }) => {
       body: JSON.stringify(data),
     })
       .then((response) => {
-        setLoading(false);
-        setSuccess(true);
+        console.log(response);
+        if (response.status === 200) {
+          setLoading(false);
+          setSuccess(true);
+        } else {
+          setLoading(false);
+          setError(true);
+        }
         form.reset();
       })
       .catch((error) => {
@@ -188,14 +194,14 @@ const ContactSection = ({ id }) => {
                   </div>
                 </div>
                 {success && (
-                  <div>
+                  <div className="mt-3">
                     <p className="text-sm text-green-500">
                       Your message has been sent.
                     </p>
                   </div>
                 )}
                 {error && (
-                  <div>
+                  <div className="mt-3">
                     <p className="text-sm text-red-500">
                       Something went wrong. Please try again.
                     </p>
