@@ -1,6 +1,7 @@
 import { Rubik } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
+import 'react-phone-number-input/style.css';
 
 const rubik = Rubik({
   subsets: ['latin'],

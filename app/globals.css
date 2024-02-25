@@ -93,3 +93,17 @@ p {
     bottom: 0px !important;
   }
 }
+
+input,
+textarea,
+input:focus {
+  @apply outline-none;
+}
+
+.PhoneInputInput {
+  @apply h-full outline-none px-2;
+}
+
+.PhoneInputCountry {
+  @apply text-secondary;
+}

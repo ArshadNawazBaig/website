@@ -17,6 +17,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Textarea } from '@/components/ui/textarea';
 import Image from 'next/image';
+import PhoneInput from 'react-phone-number-input';
 
 const formSchema = z.object({
   name: z.string().min(1, { message: 'Required' }),
@@ -163,9 +164,9 @@ const ContactSection = ({ id }) => {
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <Input
-                              className="h-[54px]"
-                              placeholder="Your Mobile Number"
+                            <PhoneInput
+                              className="h-[54px] border rounded-md pl-3 bg-white"
+                              placeholder="(000) 000-00000"
                               {...field}
                             />
                           </FormControl>
