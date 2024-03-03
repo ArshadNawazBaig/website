@@ -380,6 +380,11 @@
     "@sendgrid/client" "^8.1.1"
     "@sendgrid/helpers" "^8.0.0"
 
+"@stripe/stripe-js@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.6.tgz#80844af42eae50a9a0ba452038672c20217c7117"
+  integrity sha512-Ef3A0/zvgKbiMdCPT+rZgQBQqhNZ66wuR6Eg2w9YUuqykcIFFKU4nYApBr05WTvInrge8GuOqY5acSDiv6DOjA==
+
 "@swc/helpers@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.2.tgz#85ea0c76450b61ad7d10a37050289eded783c27d"

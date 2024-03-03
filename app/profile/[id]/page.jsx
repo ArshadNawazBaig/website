@@ -30,7 +30,7 @@ const Profile = ({ id }) => {
           <div className="col-span-12">
             <div className="border rounded-lg px-5">
               <div className="grid grid-cols-12 gap-4 border-b">
-                <div className="col-span-3 pb-4 pt-6">
+                <div className="col-span-6 md:col-span-3 pb-4 pt-6">
                   <span className="text-sm">883878555</span>
                 </div>
                 <div className="col-span-3 pb-4 pt-6 relative">
@@ -41,19 +41,19 @@ const Profile = ({ id }) => {
                 </div>
               </div>
               <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-3 pb-4 pt-6 relative">
+                <div className="col-span-12 md:col-span-3 pb-4 pt-6 relative">
                   <span className="text-xs text-gray-400 block absolute top-1 left-4">
                     Mobile #
                   </span>
                   <span className="text-sm">+1(979)331-1875</span>
                 </div>
-                <div className="col-span-3 pb-4 pt-6 relative">
+                <div className="col-span-12 md:col-span-3 pb-4 pt-6 relative">
                   <span className="text-xs text-gray-400 block absolute top-1 left-4">
                     Email
                   </span>
                   <span className="text-sm">example@example.com</span>
                 </div>
-                <div className="col-span-3 pb-4 pt-6 relative">
+                <div className="col-span-12 md:col-span-3 pb-4 pt-6 relative">
                   <span className="text-xs text-gray-400 block absolute top-1 left-4 uppercase">
                     Loyalty
                   </span>
@@ -107,25 +107,25 @@ const Profile = ({ id }) => {
                     <div className="grid grid-cols-12 gap-4 mt-10 border-b">
                       <div className="col-span-12">
                         <div className="grid grid-cols-12 gap-4">
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs uppercase text-gray-400 block absolute top-1">
                               Address
                             </span>
                             <span className="text-sm">192 St. Amber Blvd.</span>
                           </div>
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs uppercase text-gray-400 block absolute top-1">
                               City
                             </span>
                             <span className="text-sm">Edwards</span>
                           </div>
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs text-gray-400 block absolute top-1 uppercase">
                               State
                             </span>
                             <span className="text-md">Colorado</span>
                           </div>
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs text-gray-400 block absolute top-1 uppercase">
                               zip
                             </span>
@@ -137,13 +137,13 @@ const Profile = ({ id }) => {
                     <div className="grid grid-cols-12 gap-4 border-b mt-3">
                       <div className="col-span-12">
                         <div className="grid grid-cols-12 gap-4">
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs uppercase text-gray-400 block absolute top-1">
                               Mobile #
                             </span>
                             <span className="text-sm">+1(979)331-1875</span>
                           </div>
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs uppercase text-gray-400 block absolute top-1">
                               Email
                             </span>
@@ -155,7 +155,7 @@ const Profile = ({ id }) => {
                     <div className="grid grid-cols-12 gap-4 mt-3">
                       <div className="col-span-12">
                         <div className="grid grid-cols-12 gap-4">
-                          <div className="col-span-3 pb-4 pt-6 relative">
+                          <div className="col-span-6 md:col-span-3 pb-4 pt-6 relative">
                             <span className="text-xs uppercase text-gray-400 block absolute top-1">
                               Birthday #
                             </span>
@@ -169,35 +169,35 @@ const Profile = ({ id }) => {
                 {active === 'tab2' && (
                   <div className="tab2 mt-10">
                     <div className="grid grid-cols-12 gap-4 py-4 px-5 bg-gray-100">
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">00084744</span>
                       </div>
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">01/20/2023</span>
                       </div>
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">Free Pizza</span>
                       </div>
                     </div>
                     <div className="grid grid-cols-12 gap-4 py-4 px-5">
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">00084744</span>
                       </div>
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">01/20/2023</span>
                       </div>
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">10% Off</span>
                       </div>
                     </div>
                     <div className="grid grid-cols-12 gap-4 py-4 px-5 bg-gray-100">
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">00084744</span>
                       </div>
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">01/20/2023</span>
                       </div>
-                      <div className="col-span-3">
+                      <div className="col-span-4 md:col-span-3">
                         <span className="text-sm">Free Drink</span>
                       </div>
                     </div>

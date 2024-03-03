@@ -1,6 +1,8 @@
+'use client';
 import { cn } from '@/lib/utils';
 import React from 'react';
 import { Button } from './ui/button';
+import { checkout } from '@/app/checkout/page';
 
 const PricingCard = ({ className, details }) => {
   const { title, subtitle, price, packages, type, extras, anualPrice } =
@@ -48,8 +50,20 @@ const PricingCard = ({ className, details }) => {
           </li>
         ))}
       </ul>
-      <Button className="outline rounded-full bg-transparent px-12 mt-12">
-        Sign up
+      <Button
+        className="outline rounded-full bg-transparent px-12 mt-12"
+        onClick={() => {
+          checkout({
+            lineItems: [
+              {
+                price: 'price_1OqGdVHaeicZDaivGtXCh2Wd',
+                quantity: 1,
+              },
+            ],
+          });
+        }}
+      >
+        Purchase
       </Button>
     </div>
   );
