@@ -52,7 +52,7 @@ export const pricing = [
   {
     title: 'Business',
     subtitle: 'Most Popular',
-    price: '299',
+    price: 299,
     anualPrice: '1,500',
     packages: ['2 Games', 'Unlimited Distribution', '1000 - 200,000 Players'],
     type: 'business',
@@ -78,7 +78,7 @@ export const pricing = [
   {
     title: 'Enterprise',
     subtitle: 'Custom Game Design',
-    price: '500',
+    price: 500,
     anualPrice: '5,500',
     packages: [
       '6 Games',

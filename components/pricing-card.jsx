@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
 import { Button } from './ui/button';
-import { checkout } from '@/app/checkout/page';
+import { checkout } from '@/lib/stripe';
 
 const PricingCard = ({ className, details }) => {
   const { title, subtitle, price, packages, type, extras, anualPrice } =
@@ -13,6 +13,25 @@ const PricingCard = ({ className, details }) => {
       : type === 'business'
       ? 'bg-[#3598db]'
       : 'bg-[#8e44ac]';
+
+  const handleProductCheckout = (price) => {
+    let item;
+    if (price === 299) {
+      item = {
+        price: 'price_1OqGctHaeicZDaivVzzfIt1E',
+        quantity: 1,
+      };
+    }
+    if (price === 500) {
+      item = {
+        price: 'price_1OqGdVHaeicZDaivGtXCh2Wd',
+        quantity: 1,
+      };
+    }
+    checkout({
+      lineItems: [item],
+    });
+  };
   return (
     <div
       className={cn(
@@ -52,16 +71,7 @@ const PricingCard = ({ className, details }) => {
       </ul>
       <Button
         className="outline rounded-full bg-transparent px-12 mt-12"
-        onClick={() => {
-          checkout({
-            lineItems: [
-              {
-                price: 'price_1OqGdVHaeicZDaivGtXCh2Wd',
-                quantity: 1,
-              },
-            ],
-          });
-        }}
+        onClick={() => handleProductCheckout(price)}
       >
         Purchase
       </Button>
